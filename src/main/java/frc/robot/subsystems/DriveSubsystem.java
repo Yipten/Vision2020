@@ -77,12 +77,12 @@ public class DriveSubsystem extends SubsystemBase {
 		m_followerRight2.setInverted(true);
 	}
 
-    public void setLeftSpeed(double speed) { 
-        m_masterLeft.set(ControlMode.PercentOutput, -speed);
-    }
+	public void setLeftSpeed(double speed) {
+		m_masterLeft.set(ControlMode.PercentOutput, -speed);
+	}
 
-    public void setRightSpeed(double speed) {
-        m_masterRight.set(ControlMode.PercentOutput, speed);
+	public void setRightSpeed(double speed) {
+		m_masterRight.set(ControlMode.PercentOutput, speed);
 	}
 
 	public void arcadeDrive(double speed, double left, double right) {

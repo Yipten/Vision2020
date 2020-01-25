@@ -21,20 +21,17 @@ public class RobotContainer {
 	public RobotContainer() {
 		configureButtonBindings();
 
-		m_driveSubsystem.setDefaultCommand(
-			new DriveCommand(
-				m_driveSubsystem,
+		m_driveSubsystem.setDefaultCommand(new DriveCommand(m_driveSubsystem,
 				() -> -m_driverController.getRawAxis(ControllerConstants.Axis.kLeftY),
 				() -> (m_driverController.getRawAxis(ControllerConstants.Axis.kLeftTrigger) + 1) / 2,
-				() -> (m_driverController.getRawAxis(ControllerConstants.Axis.kRightTrigger) + 1) / 2
-			)
-		);
+				() -> (m_driverController.getRawAxis(ControllerConstants.Axis.kRightTrigger) + 1) / 2));
 	}
 
 	/**
 	 * Binds controller buttons and triggers to commands.
 	 */
 	private void configureButtonBindings() {
-		new JoystickButton(m_driverController, ControllerConstants.Button.kTriangle).whenHeld(new TargetCommand(m_driveSubsystem, m_arduinoSubsystem));
+		new JoystickButton(m_driverController, ControllerConstants.Button.kTriangle)
+				.whenHeld(new TargetCommand(m_driveSubsystem, m_arduinoSubsystem));
 	}
 }

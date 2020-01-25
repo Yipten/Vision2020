@@ -28,10 +28,7 @@ public class TargetCommand extends CommandBase {
         // if target is in the camera's view
         if (m_arduinoSubsystem.getTargetInView())
             // drive based on Arduino data
-            m_driveSubsystem.arcadeDrive(
-                m_arduinoSubsystem.getDriveSpeed(),
-                m_arduinoSubsystem.getTurnSpeed(),
-                -m_arduinoSubsystem.getTurnSpeed()
-            );
+            m_driveSubsystem.arcadeDrive(-m_arduinoSubsystem.getDriveSpeed(), m_arduinoSubsystem.getTurnSpeed(),
+                    -m_arduinoSubsystem.getTurnSpeed());
     }
 }

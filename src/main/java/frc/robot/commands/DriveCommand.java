@@ -13,12 +13,14 @@ public class DriveCommand extends CommandBase {
 
     /**
      * Initializes a new instance of the {@link DriveCommand} class.
+     * 
      * @param driveSubsystem {@link DriveSubsystem} to be used.
-     * @param straightSpeed Supplier of driving speed.
-     * @param leftSpeed Supplier of left turn speed.
-     * @param rightSpeed Supplier of right turn speed.
+     * @param straightSpeed  Supplier of driving speed.
+     * @param leftSpeed      Supplier of left turn speed.
+     * @param rightSpeed     Supplier of right turn speed.
      */
-    public DriveCommand(DriveSubsystem driveSubsystem, Supplier<Double> straightSpeed, Supplier<Double> leftSpeed, Supplier<Double> rightSpeed) {
+    public DriveCommand(DriveSubsystem driveSubsystem, Supplier<Double> straightSpeed, Supplier<Double> leftSpeed,
+            Supplier<Double> rightSpeed) {
         m_driveSubsystem = driveSubsystem;
         m_straightSpeed = straightSpeed;
         m_leftSpeed = leftSpeed;

@@ -14,6 +14,8 @@ public class Robot extends TimedRobot {
 	@Override
 	public void robotPeriodic() {
 		CommandScheduler.getInstance().run();
+		// System.out.println("distance: " +
+		// m_robotContainer.m_arduinoSubsystem.getDistance());
 	}
 
 	@Override
@@ -28,7 +30,7 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void autonomousInit() {
-		
+
 	}
 
 	@Override
@@ -37,7 +39,7 @@ public class Robot extends TimedRobot {
 
 	@Override
 	public void teleopInit() {
-		
+
 	}
 
 	@Override
