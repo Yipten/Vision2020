@@ -56,10 +56,10 @@ public final class Constants {
 		public static final int kAngleSetpoint = 157;
 		public static final int kAngleTolerance = 10;
 
-		public static final double kDistanceP = 0.01;
+		public static final double kDistanceP = 0.007874;
 		public static final double kDistanceI = 0.0;
 		public static final double kDistanceD = 0.0;
-		public static final int kDistanceSetpoint = 22;
+		public static final int kDistanceSetpoint = 10;
 		public static final int kDistanceTolerance = 2;
 
 		public static final int kReadTargetInView = 0;
